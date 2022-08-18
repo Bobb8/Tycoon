@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Worker Game</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- wallet -->
+<div class="main">
+<h3>Money: $ <span id="Money">Loading...</span></h3>
+<h3>Workers: <span id="workers_val">Loading...</span></h3>
+</div>
+<hr>
+
+<!-- html-log -->
+<h3 style="color: red;" id="log_err"></h3>
+<h3 style="color: green;" id="log_com"></h3>
+
+<!-- buttons -->
+<button onclick="buy_worker_1()" id="buy_worker1">Buy worker 1 [ $0 ]</button>
+<h3 id="bw1_info"></h3>
+<button onclick="buy_worker_2()" id="buy_worker2">Buy worker 2 [ $20 ]</button>
+<h3 id="bw2_info"></h3>
+<button onclick="buy_worker_3()" id="buy_worker3">Buy worker 3 [ $80 ]</button>
+<h3 id="bw3_info"></h3>
+<button onclick="buy_worker_4()" id="buy_worker4">Buy worker 4 [ $250 ]</button>
+<h3 id="bw4_info"></h3>
+<button onclick="buy_worker_5()" id="buy_worker5">Buy worker 5 [ $1000 ]</button>
+<h3 id="bw5_info"></h3>
+
+<script src="./assets/script.js"></script>
+<style>
+</style>
+</body>
+</html>

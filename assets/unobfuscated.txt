@@ -1,0 +1,227 @@
+// game settings 
+var worker_name = "Worker";
+var worker_face = "🤖";
+var start_money = "10";
+
+// security settings
+var max_workers = 5;
+var max_money = 100000;
+
+// game
+const SV = () => {
+document.getElementById("Money").textContent = start_money
+document.getElementById("workers_val").textContent = 0;
+}
+function buy_worker_1() {
+var a3 = document.getElementById("workers_val").innerHTML;
+a3++;
+document.getElementById("workers_val").textContent = a3;
+document.getElementById("log_com").innerHTML = "Your purchase has been successfully completed.";
+setTimeout(function() {
+document.getElementById("log_com").innerHTML = "";
+}, 3000);
+setTimeout(function() {
+setInterval(function() {
+var a1 = document.getElementById("Money").innerHTML;
+a1++;
+document.getElementById("Money").textContent = a1;
+}, 1000);
+}, 500);
+rmf();
+function rmf() {
+var removeBW1 = document.getElementById('buy_worker1');
+removeBW1.parentNode.removeChild(removeBW1);
+return false;
+}
+var money = 1;
+document.getElementById("bw1_info").innerHTML = `${worker_face} ${worker_name} 1 is working... (${money}/s)`;
+}
+function buy_worker_2() {
+x = document.getElementById("Money").innerHTML;
+if (+x > +19) {
+var a3 = document.getElementById("workers_val").innerHTML;
+a3++;
+document.getElementById("workers_val").textContent = a3;
+document.getElementById("log_com").innerHTML = "Your purchase has been successfully completed.";
+setTimeout(function() {
+document.getElementById("log_com").innerHTML = "";
+}, 2000);
+var a5 = document.getElementById("Money").innerHTML
+a5--;
+document.getElementById("Money").textContent = a5 - 19;
+setTimeout(function() {
+setInterval(function() {
+var a2 = document.getElementById("Money").innerHTML
+a2++;
+document.getElementById("Money").textContent = a2 + 1;
+}, 1000);
+}, 500);
+rmf();
+function rmf() {
+var removeBW2 = document.getElementById('buy_worker2');
+removeBW2.parentNode.removeChild(removeBW2);
+return false;
+}
+var money = 2;
+document.getElementById("bw2_info").innerHTML = `${worker_face} ${worker_name} 2 is working... (${money}/s)`;
+} else {
+document.getElementById("log_err").innerHTML = "You don't have enough money!";
+setTimeout(function() {
+document.getElementById("log_err").innerHTML = "";
+}, 3000);
+}
+}
+function buy_worker_3() {
+x = document.getElementById("Money").innerHTML;
+if (+x > +79) {
+var a3 = document.getElementById("workers_val").innerHTML;
+a3++;
+document.getElementById("workers_val").textContent = a3;
+document.getElementById("log_com").innerHTML = "Your purchase has been successfully completed.";
+setTimeout(function() {
+document.getElementById("log_com").innerHTML = "";
+}, 2000);
+var a5 = document.getElementById("Money").innerHTML
+a5--;
+document.getElementById("Money").textContent = a5 - 79;
+setTimeout(function() {
+setInterval(function() {
+var a2 = document.getElementById("Money").innerHTML
+a2++;
+document.getElementById("Money").textContent = a2 + 4;
+}, 1000);
+}, 500);
+rmf();
+function rmf() {
+var removeBW2 = document.getElementById('buy_worker3');
+removeBW2.parentNode.removeChild(removeBW2);
+return false;
+}
+var money = 5;
+document.getElementById("bw3_info").innerHTML = `${worker_face} ${worker_name} 3 is working... (${money}/s)`;
+} else {
+document.getElementById("log_err").innerHTML = "You don't have enough money!";
+setTimeout(function() {
+document.getElementById("log_err").innerHTML = "";
+}, 3000);
+}
+}
+function buy_worker_4() {
+x = document.getElementById("Money").innerHTML;
+if (+x > +249) {
+var a3 = document.getElementById("workers_val").innerHTML;
+a3++;
+document.getElementById("workers_val").textContent = a3;
+document.getElementById("log_com").innerHTML = "Your purchase has been successfully completed.";
+setTimeout(function() {
+document.getElementById("log_com").innerHTML = "";
+}, 2000);
+var a5 = document.getElementById("Money").innerHTML
+a5--;
+document.getElementById("Money").textContent = a5 - 249;
+setTimeout(function() {
+setInterval(function() {
+var a2 = document.getElementById("Money").innerHTML
+a2++;
+document.getElementById("Money").textContent = a2 + 9;
+}, 1000);
+}, 500);
+rmf();
+function rmf() {
+var removeBW2 = document.getElementById('buy_worker4');
+removeBW2.parentNode.removeChild(removeBW2);
+return false;
+}
+var money = 10;
+document.getElementById("bw4_info").innerHTML = `${worker_face} ${worker_name} 4 is working... (${money}/s)`;
+} else {
+document.getElementById("log_err").innerHTML = "You don't have enough money!";
+setTimeout(function() {
+document.getElementById("log_err").innerHTML = "";
+}, 3000);
+}
+}
+
+function buy_worker_5() {
+x = document.getElementById("Money").innerHTML;
+if (+x > +999) {
+var a3 = document.getElementById("workers_val").innerHTML;
+a3++;
+document.getElementById("workers_val").textContent = a3;
+document.getElementById("log_com").innerHTML = "Your purchase has been successfully completed.";
+setTimeout(function() {
+document.getElementById("log_com").innerHTML = "";
+}, 2000);
+var a5 = document.getElementById("Money").innerHTML
+a5--;
+document.getElementById("Money").textContent = a5 - 999;
+setTimeout(function() {
+setInterval(function() {
+var a2 = document.getElementById("Money").innerHTML
+a2++;
+document.getElementById("Money").textContent = a2 + 24;
+}, 1000);
+}, 500);
+rmf();
+function rmf() {
+var removeBW2 = document.getElementById('buy_worker5');
+removeBW2.parentNode.removeChild(removeBW2);
+return false;
+}
+var money = 25;
+document.getElementById("bw5_info").innerHTML = `${worker_face} ${worker_name} 5 is working... (${money}/s)`;
+} else {
+document.getElementById("log_err").innerHTML = "You don't have enough money!";
+setTimeout(function() {
+document.getElementById("log_err").innerHTML = "";
+}, 3000);
+}
+}
+function hack() {
+var a2 = document.getElementById("Money").innerHTML
+a2++;
+document.getElementById("Money").textContent = a2 + 99999;
+}
+setInterval(function() {
+mch = document.getElementById("workers_val").innerHTML;
+if (+mch > +max_workers) {
+alert("cheating detected!");
+const deleteAllCookies = () => {
+const cookies = document.cookie.split(";");
+for (const cookie of cookies) {
+const eqPos = cookie.indexOf("=");
+const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+document.cookie = name + "=;expires=Thu, 01 Jan 2000 00:00:00 GMT";
+}
+}
+deleteAllCookies()
+location.reload();
+};
+}, 1000);
+setInterval(function() {
+mch = document.getElementById("Money").innerHTML;
+if (+mch > +max_money) {
+document.getElementById("Money").textContent = 0;
+alert("cheating detected!");
+const deleteAllCookies = () => {
+const cookies = document.cookie.split(";");
+for (const cookie of cookies) {
+const eqPos = cookie.indexOf("=");
+const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+document.cookie = name + "=;expires=Thu, 01 Jan 2000 00:00:00 GMT";
+}
+}
+deleteAllCookies()
+location.reload();
+};
+}, 1000);
+
+// save data test
+setInterval(function() {
+document.cookie = "money=" + document.getElementById("Money").innerHTML;
+document.cookie = "workers=" + document.getElementById("workers_val").innerHTML;
+}, 1000);
+
+SV();
+
+console.log("by Bobb#8015 for you")
